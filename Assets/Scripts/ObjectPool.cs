@@ -10,7 +10,7 @@ public class ObjectPool : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        for(int i = 0; i < poolSize; i++){
+        for(int i = 1; i < poolSize; i++){
             GameObject obj = Instantiate(block);
             obj.SetActive(false);
             pool.Add(obj);
@@ -21,12 +21,10 @@ public class ObjectPool : MonoBehaviour
         foreach(var obj in pool){
             if (!obj.activeInHierarchy)
             {
-                obj.SetActive(true);
                 return obj;
             }
         }
         GameObject newObj = Instantiate(block);
-        newObj.SetActive(true);
         pool.Add(newObj);
         return newObj;
     }
