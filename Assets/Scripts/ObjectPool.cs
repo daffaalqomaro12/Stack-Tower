@@ -5,7 +5,8 @@ public class ObjectPool : MonoBehaviour
 {
 
     public GameObject block;
-    int poolSize = 10;
+    int poolSize = 100;
+    [SerializeField] Transform spawnPos;
     [SerializeField] List<GameObject> pool = new List<GameObject>();
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -13,6 +14,7 @@ public class ObjectPool : MonoBehaviour
         for(int i = 1; i < poolSize; i++){
             GameObject obj = Instantiate(block);
             obj.SetActive(false);
+            obj.transform.SetParent(spawnPos);
             pool.Add(obj);
         }
     }
