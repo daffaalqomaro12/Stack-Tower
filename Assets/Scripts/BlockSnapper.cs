@@ -37,5 +37,6 @@ public class BlockSnapper : MonoBehaviour
         }
 
         block.rotation = targetRot;
+        block.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 }

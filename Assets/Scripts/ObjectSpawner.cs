@@ -35,6 +35,7 @@ public class ObjectSpawner : MonoBehaviour
             lastBlock = currentBlock;
             currentBlock = null;
             count++;
+            Debug.Log("Block ke-" + count);
             firstBlock = false;
 
             targetCameraPosition.y += 3f;
@@ -54,8 +55,6 @@ public class ObjectSpawner : MonoBehaviour
         currentBlock.SetActive(true);
         Vector2 blockStartPos = new Vector2(spawnPos.position.x, spawnPos.position.y);
         currentBlock.transform.position = blockStartPos;
-        
-        Vector3 viewPos = Camera.main.WorldToViewportPoint(currentBlock.transform.position);
         currentBlock.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
     }
 }
