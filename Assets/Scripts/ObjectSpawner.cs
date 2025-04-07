@@ -6,6 +6,7 @@ public class ObjectSpawner : MonoBehaviour
 {
     public ObjectPool pool;
     [SerializeField] GameObject currentBlock;
+    public GameObject lastBlock;
     public Transform spawnPos;
     public Camera camera;
     private Vector3 targetCameraPosition;
@@ -14,6 +15,7 @@ public class ObjectSpawner : MonoBehaviour
     public float cameraMoveSpeed = 1f;
     public bool firstBlock = true;
     public float spawnOffset = 0f;
+    
 
     private int count;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -30,6 +32,7 @@ public class ObjectSpawner : MonoBehaviour
         if((Input.GetMouseButtonDown(0)) || (Input.GetKeyDown(KeyCode.Space)) && currentBlock != null){
             currentBlock.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             currentBlock.transform.SetParent(null);
+            lastBlock = currentBlock;
             currentBlock = null;
             count++;
             firstBlock = false;
