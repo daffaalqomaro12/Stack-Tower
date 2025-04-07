@@ -27,7 +27,7 @@ public class ObjectSpawner : MonoBehaviour
     void Update()
     {
         camera.transform.position = Vector3.Lerp(camera.transform.position, targetCameraPosition, Time.deltaTime * cameraMoveSpeed);
-        if(Input.GetMouseButtonDown(0) && currentBlock != null){
+        if((Input.GetMouseButtonDown(0)) || (Input.GetKeyDown(KeyCode.Space)) && currentBlock != null){
             currentBlock.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             currentBlock.transform.SetParent(null);
             currentBlock = null;
