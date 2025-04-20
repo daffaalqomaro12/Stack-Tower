@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BlockSnapper : MonoBehaviour
 {
-    [SerializeField] ObjectSpawner objectSpawner;
+    private ObjectSpawner objectSpawner;
 
 
     void Start()
@@ -21,7 +21,7 @@ public class BlockSnapper : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Invoke("LockBlock", 1f);
+        Invoke("LockBlock", 0.3f);
     }
 
     IEnumerator FixRotate(Transform block){
@@ -38,5 +38,6 @@ public class BlockSnapper : MonoBehaviour
 
         block.rotation = targetRot;
         block.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+        block.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
     }
 }
