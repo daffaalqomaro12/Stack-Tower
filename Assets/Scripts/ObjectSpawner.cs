@@ -15,9 +15,8 @@ public class ObjectSpawner : MonoBehaviour
     public float cameraMoveSpeed = 1f;
     public bool firstBlock = true;
     public float spawnOffset = 0f;
+    public int count;
     
-
-    private int count;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

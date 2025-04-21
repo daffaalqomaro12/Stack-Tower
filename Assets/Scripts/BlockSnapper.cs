@@ -15,7 +15,6 @@ public class BlockSnapper : MonoBehaviour
 
         if(objectSpawner.lastBlock != null){
             StartCoroutine(FixRotate(objectSpawner.lastBlock.transform));
-            objectSpawner.lastBlock.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         }
     }
 
