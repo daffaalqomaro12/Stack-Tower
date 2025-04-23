@@ -27,7 +27,7 @@ public class BlockSnapper : MonoBehaviour
         Quaternion currentRot = block.rotation;
         Quaternion targetRot = Quaternion.Euler(0, 0, 0);
         float time = 0f;
-        float duration = 0.3f;
+        float duration = 0.5f;
 
         while(time < duration){
             block.rotation = Quaternion.Lerp(currentRot, targetRot, time/duration);
@@ -37,6 +37,7 @@ public class BlockSnapper : MonoBehaviour
 
         block.rotation = targetRot;
         block.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-        block.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePosition;
+
+        objectSpawner.lastBlock.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
     }
 }

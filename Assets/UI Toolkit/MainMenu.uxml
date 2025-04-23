@@ -1,0 +1,8 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenu.uss?fileID=7433441132597879392&amp;guid=2bf288d4700b10a49963cd74f520347c&amp;type=3#MainMenu" />
+    <engine:VisualElement name="ButtonContainer" class="button-container" style="flex-grow: 1; padding-top: 150px; padding-left: 250px;">
+        <engine:Button text="Start" name="Start" parse-escape-sequences="false" triple-click-selects-line="false" double-click-selects-word="false" emoji-fallback-support="false" class="button-menu" style="-unity-text-align: middle-left; top: 0;" />
+        <engine:Button text="Options" name="Options" parse-escape-sequences="false" triple-click-selects-line="false" double-click-selects-word="false" emoji-fallback-support="false" class="button-menu" style="-unity-text-align: middle-left;" />
+        <engine:Button text="Exit" name="Exit" parse-escape-sequences="false" triple-click-selects-line="false" double-click-selects-word="false" emoji-fallback-support="false" class="button-menu" style="-unity-text-align: middle-left;" />
+    </engine:VisualElement>
+</engine:UXML>

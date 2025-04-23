@@ -1,0 +1,20 @@
+.button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    height: 100%;
+    width: 100%;
+}
+
+.button-menu {
+    font-size: 30px;
+    background-color: transparent;
+    border-width: 0;
+    padding: 10px;
+    transition: color 0.2s ease;
+}
+
+.button-menu:hover {
+    color: rgba(255, 0, 0, 0.78);
+    font-size: 35px;
+}
