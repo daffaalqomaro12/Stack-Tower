@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Tali-export_0: -7455623615163066136
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
